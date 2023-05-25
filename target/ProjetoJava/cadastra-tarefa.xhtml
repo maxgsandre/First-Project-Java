@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+    <title>Cadastrar Tarefa</title>
+</h:head>
+
+<h:body>
+    <h1>Cadastrar Tarefa</h1>
+
+    <h:form>
+        <h:panelGrid columns="2">
+            <h:outputLabel for="titulo">Título:</h:outputLabel>
+            <h:inputText id="titulo" value="#{controller.tarefaSelecionada.titulo}" required="true"/>
+
+            <h:outputLabel for="descricao">Descrição:</h:outputLabel>
+            <h:inputTextarea id="descricao" value="#{controller.tarefaSelecionada.descricao}" required="true"/>
+
+            <h:outputLabel for="responsavel">Responsável:</h:outputLabel>
+            <h:inputText id="responsavel" value="#{controller.tarefaSelecionada.responsavel}" required="true"/>
+
+            <h:outputLabel for="prioridade">Prioridade:</h:outputLabel>
+            <h:selectOneMenu id="prioridade" value="#{controller.tarefaSelecionada.prioridade}" required="true">
+                <f:selectItem itemLabel="Baixa" itemValue="Baixa"/>
+                <f:selectItem itemLabel="Média" itemValue="Média"/>
+                <f:selectItem itemLabel="Alta" itemValue="Alta"/>
+            </h:selectOneMenu>
+
+            <h:outputLabel for="deadline">Deadline:</h:outputLabel>
+            <h:inputText id="deadline" value="#{controller.tarefaSelecionada.deadline}" required="true">
+                <f:convertDateTime pattern="yyyy-MM-dd"/>
+            </h:inputText>
+
+            <h:commandButton value="Adicionar" action="#{controller.adicionarTarefa(controller.tarefaSelecionada)}"/>
+        </h:panelGrid>
+    </h:form>
+
+    <h2>Lista de Tarefas</h2>
+
+    <h:dataTable value="#{controller.listarTarefas()}" var="tarefa">
+        <h:column>
+            <f:facet name="header">Título</f:facet>
+            #{tarefa.titulo}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Descrição</f:facet>
+            #{tarefa.descricao}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Responsável</f:facet>
+            #{tarefa.responsavel}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Prioridade</f:facet>
+            #{tarefa.prioridade}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Deadline</f:facet>
+            #{tarefa.deadline}
+        </h:column>
+        <h:column>
+            <f:facet name="header">Concluída</f:facet>
+            #{tarefa.concluida}
+        </h:column>
+        <h:column>
+            <h:commandButton value="Editar" action="#{controller.buscarTarefaPorId(tarefa.id)}"/>
+            <h:commandButton value="Remover" action="#{controller.removerTarefa(tarefa)}"/>
+        </h:column>
+    </h:dataTable>
+</h:body>
+</html>

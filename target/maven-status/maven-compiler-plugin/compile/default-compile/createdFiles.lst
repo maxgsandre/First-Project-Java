@@ -1,3 +1,5 @@
 com\max\app\App.class
+com\max\gerenciadortarefas\controller\Controller.class
 com\max\gerenciadortarefas\model\Tarefa.class
-com\max\gerenciadortarefas\conttroler\Controller.class
+com\max\gerenciadortarefas\converter\DateConverter.class
+com\max\gerenciadortarefas\controller\CadastraTarefaController.class
