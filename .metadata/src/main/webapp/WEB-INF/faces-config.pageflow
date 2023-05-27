@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16850305933730" configfile="/ProjetoJava/src/main/webapp/WEB-INF/faces-config.xml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16850305933730" configfile="/ProjetoJava/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="122" y="178" id="pf16851188342862" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf16851188342863" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="cadastro-tarefa.xhtml" x="338" y="178" id="pf16851188342864" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf16851188342863" path="/cadastro-tarefa.xhtml"/>
+  <links id="pf16851188342863" target="pf16851188342864" source="pf16851188342862" outcome="cadastra-tarefa" redirect="true"/>
+</pageflow:Pageflow>

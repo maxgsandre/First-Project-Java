@@ -30,7 +30,9 @@
                 <f:convertDateTime pattern="yyyy-MM-dd"/>
             </h:inputText>
 
-            <h:commandButton value="Adicionar" action="#{controller.adicionarTarefa(controller.tarefaSelecionada)}"/>
+            <h:commandButton value="Adicionar" action="#{controller.adicionarTarefa}">
+                <f:param name="tarefa" value="#{controller.tarefaSelecionada}"/>
+            </h:commandButton>
         </h:panelGrid>
     </h:form>
     <h:dataTable value="#{controller.listarTarefas()}" var="tarefa">

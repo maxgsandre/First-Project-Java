@@ -9,12 +9,12 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.ConverterException;
 
-public class DateConverter implements Converter {
+public class DateConverter implements Converter<Date> {
 
     private static final String DEFAULT_DATE_PATTERN = "yyyy-MM-dd";
 
     @Override
-    public Object getAsObject(FacesContext context, UIComponent component, String value) {
+    public Date getAsObject(FacesContext context, UIComponent component, String value) {
         if (value == null || value.isEmpty()) {
             return null;
         }
@@ -28,16 +28,13 @@ public class DateConverter implements Converter {
     }
 
     @Override
-    public String getAsString(FacesContext context, UIComponent component, Object value) {
+    public String getAsString(FacesContext context, UIComponent component, Date value) {
         if (value == null) {
             return "";
         }
 
-        if (!(value instanceof Date)) {
-            throw new ConverterException("O valor informado não é uma instância de java.util.Date");
-        }
-
         DateFormat dateFormat = new SimpleDateFormat(DEFAULT_DATE_PATTERN);
-        return dateFormat.format((Date) value);
+        return dateFormat.format(value);
     }
 }
+

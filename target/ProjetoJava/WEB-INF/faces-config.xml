@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
     version="2.2">
-    
+
   <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
@@ -13,17 +13,18 @@
             <redirect/>
         </navigation-case>
     </navigation-rule>
-    
+
     <managed-bean>
-        <managed-bean-name>tarefaBean</managed-bean-name>
-        <managed-bean-class>com.max.gerenciadortarefas.conttroler.Controller</managed-bean-class>
+        <managed-bean-name>controller</managed-bean-name>
+        <managed-bean-class>com.max.gerenciadortarefas.controller.Controller</managed-bean-class>
         <managed-bean-scope>view</managed-bean-scope>
     </managed-bean>
-    
+
     <converter>
         <converter-id>dateConverter</converter-id>
         <converter-class>com.max.gerenciadortarefas.converter.DateConverter</converter-class>
     </converter>
-    
+
 </faces-config>
+
 
