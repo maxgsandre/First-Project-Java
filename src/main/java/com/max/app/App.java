@@ -1,7 +1,8 @@
 package com.max.app;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
@@ -13,9 +14,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import java.util.Properties;
 
-@Configuration
+@SpringBootApplication
 @EnableTransactionManagement
 public class App {
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
+
     @Bean
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -60,3 +65,4 @@ public class App {
         return properties;
     }
 }
+
