@@ -2,40 +2,39 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
-<h:head>
-    <title>Cadastrar Tarefa</title>
-</h:head>
-<h:body>
+<head>
+  <title>Cadastrar Tarefa</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
     <h1>Cadastrar Tarefa</h1>
-    <h:form>
-        <f:metadata>
-            <f:viewParam name="tarefa" value="#{controller.tarefaSelecionada}" />
-        </f:metadata>
-        <h:panelGrid columns="2">
-            <h:outputLabel for="titulo">Título:</h:outputLabel>
-            <h:inputText id="titulo" value="#{controller.tarefaSelecionada.titulo}" required="true"/>
-
-            <h:outputLabel for="descricao">Descrição:</h:outputLabel>
-            <h:inputTextarea id="descricao" value="#{controller.tarefaSelecionada.descricao}" required="true"/>
-
-            <h:outputLabel for="responsavel">Responsável:</h:outputLabel>
-            <h:inputText id="responsavel" value="#{controller.tarefaSelecionada.responsavel}" required="true"/>
-
-            <h:outputLabel for="prioridade">Prioridade:</h:outputLabel>
-            <h:selectOneMenu id="prioridade" value="#{controller.tarefaSelecionada.prioridade}" required="true">
-                <f:selectItem itemLabel="Baixa" itemValue="Baixa"/>
-                <f:selectItem itemLabel="Média" itemValue="Média"/>
-                <f:selectItem itemLabel="Alta" itemValue="Alta"/>
-            </h:selectOneMenu>
-
-            <h:outputLabel for="deadline">Deadline:</h:outputLabel>
-            <h:inputText id="deadline" value="#{controller.tarefaSelecionada.deadline}" required="true">
-                <f:convertDateTime pattern="yyyy-MM-dd"/>
-            </h:inputText>
-
-            <h:commandButton value="Adicionar" action="#{controller.adicionarTarefa(controller.tarefaSelecionada)}"/>
-        </h:panelGrid>
-    </h:form>
-</h:body>
+    <form>
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" name="titulo">
+      <br>
+      <label for="descricao">Descrição:</label>
+      <textarea id="descricao" name="descricao"></textarea>
+      <br>
+      <label for="responsavel">Responsável:</label>
+      <select id="responsavel" name="responsavel">
+        <option value="usuario1">Usuário 1</option>
+        <option value="usuario2">Usuário 2</option>
+        <!-- Adicione mais opções de responsáveis, se necessário -->
+      </select>
+      <br>
+      <label for="prioridade">Prioridade:</label>
+      <select id="prioridade" name="prioridade">
+        <option value="alta">Alta</option>
+        <option value="media">Média</option>
+        <option value="baixa">Baixa</option>
+      </select>
+      <br>
+      <label for="deadline">Deadline:</label>
+      <input type="text" id="deadline" name="deadline">
+      <br>
+      <input type="submit" value="Cadastrar">
+    </form>
+  </div>
+</body>
 </html>
-
