@@ -1,91 +1,78 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
 <head>
-  <title>Minha Página</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+<title>Minha Página</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Minha Página</h1>
-    <h2>Cadastrar Tarefa</h2>
-    <form>
-      <label for="titulo">Título:</label>
-      <input type="text" id="titulo" name="titulo">
-      <br>
-      <label for="descricao">Descrição:</label>
-      <textarea id="descricao" name="descricao"></textarea>
-      <br>
-      <label for="responsavel">Responsável:</label>
-      <select id="responsavel" name="responsavel">
-        <option value="usuario1">Usuário 1</option>
-        <option value="usuario2">Usuário 2</option>
-        <!-- Adicione mais opções de responsáveis, se necessário -->
-      </select>
-      <br>
-      <label for="prioridade">Prioridade:</label>
-      <select id="prioridade" name="prioridade">
-        <option value="alta">Alta</option>
-        <option value="media">Média</option>
-        <option value="baixa">Baixa</option>
-      </select>
-      <br>
-      <label for="deadline">Deadline:</label>
-      <input type="text" id="deadline" name="deadline">
-      <br>
-      <input type="submit" value="Cadastrar">
-    </form>
-    
-    <h2>Listagem de Tarefas</h2>
-    <form>
-      <label for="numero">Número:</label>
-      <input type="text" id="numero" name="numero">
-      <br>
-      <label for="buscar-titulo-descricao">Título/Descrição:</label>
-      <input type="text" id="buscar-titulo-descricao" name="buscar-titulo-descricao">
-      <br>
-      <label for="buscar-responsavel">Responsável:</label>
-      <select id="buscar-responsavel" name="buscar-responsavel">
-        <option value="">Todos</option>
-        <option value="usuario1">Usuário 1</option>
-        <option value="usuario2">Usuário 2</option>
-        <!-- Adicione mais opções de responsáveis, se necessário -->
-      </select>
-      <br>
-      <label for="buscar-situacao">Situação:</label>
-      <select id="buscar-situacao" name="buscar-situacao">
-        <option value="">Todas</option>
-        <option value="andamento">Em Andamento</option>
-        <option value="concluida">Concluída</option>
-      </select>
-      <br>
-      <input type="submit" value="Buscar Tarefa">
-    </form>
-    
-    <table>
-      <thead>
-        <tr>
-          <th>Número</th>
-          <th>Título</th>
-          <th>Responsável</th>
-          <th>Ações</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Tarefa 1</td>
-          <td>Usuário 1</td>
-          <td>
-            <a href="#">Editar</a> |
-            <a href="#">Excluir</a> |
-            <a href="#">Concluir</a>
-          </td>
-        </tr>
-        <!-- Adicione mais linhas, se necessário -->
-      </tbody>
-    </table>
-  </div>
+	<div class="container-principal">
+		<div class="container-cadastro">
+
+			<h2>Cadastrar Tarefa</h2>
+			<form>
+				<label for="titulo">Título:</label> <input type="text" id="titulo"
+					name="titulo" /> <br /> <label for="descricao">Descrição:</label>
+				<textarea id="descricao" name="descricao"></textarea>
+				<br /> <label for="responsavel">Responsável:</label> <select
+					id="responsavel" name="responsavel">
+					<option value="usuario1">Usuário 1</option>
+					<option value="usuario2">Usuário 2</option>
+					<!-- Adicione mais opções de responsáveis, se necessário -->
+				</select> <br /> <label for="prioridade">Prioridade:</label> <select
+					id="prioridade" name="prioridade">
+					<option value="alta">Alta</option>
+					<option value="media">Média</option>
+					<option value="baixa">Baixa</option>
+				</select> <br /> <label for="deadline">Deadline:</label> <input type="text"
+					id="deadline" name="deadline" /> <br /> <input type="submit"
+					value="Cadastrar" />
+			</form>
+		</div>
+		<div class="container-lista">
+			<h2>Listagem de Tarefas</h2>
+			<form>
+				<label for="numero">Número:</label> <input type="text" id="numero"
+					name="numero" /> <br /> <label for="buscar-titulo-descricao">Título/Descrição:</label>
+				<input type="text" id="buscar-titulo-descricao"
+					name="buscar-titulo-descricao" /> <br /> <label
+					for="buscar-responsavel">Responsável:</label> <select
+					id="buscar-responsavel" name="buscar-responsavel">
+					<option value="">Todos</option>
+					<option value="usuario1">Usuário 1</option>
+					<option value="usuario2">Usuário 2</option>
+					<!-- Adicione mais opções de responsáveis, se necessário -->
+				</select> <br /> <label for="buscar-situacao">Situação:</label> <select
+					id="buscar-situacao" name="buscar-situacao">
+					<option value="">Todas</option>
+					<option value="andamento">Em Andamento</option>
+					<option value="concluida">Concluída</option>
+				</select> <br /> <input type="submit" value="Buscar Tarefa" />
+			</form>
+
+
+			<table>
+				<thead>
+					<tr>
+						<th>Número</th>
+						<th>Título</th>
+						<th>Responsável</th>
+						<th>Ações</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Tarefa 1</td>
+						<td>Usuário 1</td>
+						<td><a href="#">Editar</a> | <a href="#">Excluir</a> | <a
+							href="#">Concluir</a></td>
+					</tr>
+					<!-- Adicione mais linhas, se necessário -->
+				</tbody>
+			</table>
+		</div>
+	</div>
 </body>
 </html>

@@ -3,7 +3,7 @@ body {
   background-color: #f2f2f2;
 }
 
-.container {
+.container-principal {
   width: 80%;
   margin: 0 auto;
   padding: 20px;
@@ -11,9 +11,22 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  margin-bottom: 20px;
+.container-cadastro {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.container-lista {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 
 form {
   margin-bottom: 20px;
