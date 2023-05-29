@@ -1,40 +1,34 @@
-<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
 <head>
-  <title>Cadastrar Tarefa</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+<title>Cadastrar Tarefa</title>
+<link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="container">
-    <h1>Cadastrar Tarefa</h1>
-    <form>
-      <label for="titulo">Título:</label>
-      <input type="text" id="titulo" name="titulo">
-      <br>
-      <label for="descricao">Descrição:</label>
-      <textarea id="descricao" name="descricao"></textarea>
-      <br>
-      <label for="responsavel">Responsável:</label>
-      <select id="responsavel" name="responsavel">
-        <option value="usuario1">Usuário 1</option>
-        <option value="usuario2">Usuário 2</option>
-        <!-- Adicione mais opções de responsáveis, se necessário -->
-      </select>
-      <br>
-      <label for="prioridade">Prioridade:</label>
-      <select id="prioridade" name="prioridade">
-        <option value="alta">Alta</option>
-        <option value="media">Média</option>
-        <option value="baixa">Baixa</option>
-      </select>
-      <br>
-      <label for="deadline">Deadline:</label>
-      <input type="text" id="deadline" name="deadline">
-      <br>
-      <input type="submit" value="Cadastrar">
-    </form>
-  </div>
+	<div class="container-cadastro">
+		<h2>Cadastrar Tarefa</h2>
+		<form>
+			<label for="titulo">Título:</label> <input type="text" id="titulo"
+				name="titulo" /><br /> <label for="descricao">Descrição:</label>
+			<textarea id="descricao" name="descricao"></textarea>
+			<br /> <label for="responsavel">Responsável:</label> <select
+				id="responsavel" name="responsavel">
+				<option value="usuario1">Usuário 1</option>
+				<option value="usuario2">Usuário 2</option>
+			</select><br /> <label for="prioridade">Prioridade:</label> <select
+				id="prioridade" name="prioridade">
+				<option value="alta">Alta</option>
+				<option value="media">Média</option>
+				<option value="baixa">Baixa</option>
+			</select><br /> <label for="deadline">Deadline:</label> <input type="text"
+				id="deadline" name="deadline" /><br /> <input type="submit"
+				value="Cadastrar" />
+		</form>
+	</div>
 </body>
 </html>

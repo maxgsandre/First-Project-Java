@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 <head>
 <title>Minha Página</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link href="styles.css" rel="stylesheet" />
 </head>
 <body>
 	<div class="container-principal">
@@ -18,7 +21,6 @@
 					id="responsavel" name="responsavel">
 					<option value="usuario1">Usuário 1</option>
 					<option value="usuario2">Usuário 2</option>
-					<!-- Adicione mais opções de responsáveis, se necessário -->
 				</select> <br /> <label for="prioridade">Prioridade:</label> <select
 					id="prioridade" name="prioridade">
 					<option value="alta">Alta</option>
@@ -29,7 +31,7 @@
 					value="Cadastrar" />
 			</form>
 		</div>
-		
+
 		<div class="container-lista">
 			<h2>Listagem de Tarefas</h2>
 			<form>
@@ -42,7 +44,6 @@
 					<option value="">Todos</option>
 					<option value="usuario1">Usuário 1</option>
 					<option value="usuario2">Usuário 2</option>
-					<!-- Adicione mais opções de responsáveis, se necessário -->
 				</select> <br /> <label for="buscar-situacao">Situação:</label> <select
 					id="buscar-situacao" name="buscar-situacao">
 					<option value="">Todas</option>
@@ -50,8 +51,6 @@
 					<option value="concluida">Concluída</option>
 				</select> <br /> <input type="submit" value="Buscar Tarefa" />
 			</form>
-
-
 			<table>
 				<thead>
 					<tr>
@@ -69,7 +68,6 @@
 						<td><a href="#">Editar</a> | <a href="#">Excluir</a> | <a
 							href="#">Concluir</a></td>
 					</tr>
-					<!-- Adicione mais linhas, se necessário -->
 				</tbody>
 			</table>
 		</div>
